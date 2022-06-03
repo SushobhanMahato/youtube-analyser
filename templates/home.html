@@ -1,0 +1,38 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+      <link rel="stylesheet" href="{% static 'styles1.css' %}">
+      <script src="{% static 'script1.js' %}" defer></script>
+      <title>Main Page</title>
+    </head>
+    <body>
+      <div class="login-page">
+          <div class="form">
+            <form class="login-form" action="generate" method="post">
+              {% csrf_token %}
+              <input type="text" name="string1" placeholder="give a string"/>
+              <button>Submit</button>   
+            </form>
+          </div>
+        </div>
+
+      <div class="ok">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <!--
+          The dropdownfield shows some perticuler string with respect to the input string
+        -->
+        <div class="dropdown-content">
+          <a href="#"> String = {{ s1 }} </a>
+          {% for g in l %}
+          <a href="#"> {{ g }} </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

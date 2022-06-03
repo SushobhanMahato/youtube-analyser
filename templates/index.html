@@ -1,0 +1,51 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'background_styles.css' %}">
+      <link rel="stylesheet" href="{% static 'styles.css' %}">
+      <script src="{% static 'script.js' %}" defer></script>
+      <title>Login Page</title>
+    </head>
+    <body>
+      <nav class="navbar">
+        {% if user.is_authenticated %}
+        <div class="brand-title"> <pre> Wellcome  {{ user }} </pre> </div>
+       {% else %}
+       <div class="brand-title"> Hey! please login </div>
+       {% endif %} 
+ 
+      
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="https://sushobhanmahato.github.io/" target="blank">About Me</a></li>
+            <li><a href="https://www.linkedin.com/in/sushobhan-mahato-4026b121b/" target="blank">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!--
+        If the user is user is not authenticated, then he first have login or else he can't use the main application.
+        After verifying login with google, it will redirect to the main application.
+      -->
+  <div class="main-botton">
+ <a class="my-button" title="In the login page, select continue with google" href="{% provider_login_url 'google' %}">
+            Login with Google!
+ </a>
+            {% if user.is_authenticated %}
+             <a class="my-button" title="Let's Go" href="home">  Start App </a>
+            {% else %}
+            <a class="my-button" title="Login first" href="{% provider_login_url 'google' %}">  Start App </a>
+            {% endif %} 
+      
+ </div>
+  </body>
+</html>

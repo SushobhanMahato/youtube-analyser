@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+html {
+    background-color: #53c5d6; /*For the first page*/
+}
