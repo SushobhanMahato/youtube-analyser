@@ -10,29 +10,35 @@
       <title>Main Page</title>
     </head>
     <body>
+      <div class="error">
+        {% for message in messages %}
+         <h5> {{ message }} </h5>
+         {% endfor %}
+           </div>
       <div class="login-page">
           <div class="form">
             <form class="login-form" action="generate" method="post">
               {% csrf_token %}
-              <input type="text" name="string1" placeholder="give a string"/>
+              <input type="text" name="string1" placeholder="give valid channel ID"/>
               <button>Submit</button>   
             </form>
           </div>
         </div>
-
-      <div class="ok">
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <!--
-          The dropdownfield shows some perticuler string with respect to the input string
-        -->
-        <div class="dropdown-content">
-          <a href="#"> String = {{ s1 }} </a>
-          {% for g in l %}
-          <a href="#"> {{ g }} </a>
-          {% endfor %}
+   
+        <div class="login-page1">
+        <div class="form1">
+          {% if s1 %}
+          <image src = {{link}}> 
+          <p class="chname"> {{ s1 }} </p>
+          <p> About : {{desc}} </p>
+          <p class="hmm"> Stats </p>
+          <p class= "hmm1"> Number of subscribers = {{subs}} </p>
+          <p class= "hmm1"> Number of videos uploaded = {{videos}} </p>
+          <p class= "hmm1"> Total channel views = {{views}} </p>
+          <a href="#"><div class="dropbtn"> Get Video data </div></a>
+           {% endif %}
         </div>
-      </div>
     </div>
+ 
     </body>
 </html>

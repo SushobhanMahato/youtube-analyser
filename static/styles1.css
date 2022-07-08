@@ -11,7 +11,7 @@
     z-index: 1;
     background: #FFFFFF;
     max-width: 360px;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     padding: 45px;
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -41,6 +41,7 @@
     transition: all 0.3 ease;
     cursor: pointer;
   }
+  
   .form button:hover,.form button:active,.form button:focus {
     background: #43A047;
   }
@@ -99,7 +100,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;      
   }
-
+  .error{
+    color : red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:0px;
+    margin-top:0px;
+  }
+  .error h5{
+    padding-top:0px;
+    margin-top:0px;  
+  }
 
 .ok{
     display: flex;
@@ -109,19 +121,63 @@
     align-items: center;
     justify-content: space-around;
 }
+.login-page1 {
+  width: 550px;
+  padding: 0 0;
+  margin: auto;
+}
+.form1 {
+  position: relative;
+  z-index: 1;
+  background: white;
+  max-width: 5500px;
+  margin: 0 auto 50px;
+  border: #04AA6D 2px solid;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.chname{
+  margin: 0%;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+  font-weight: 700;
+  color: #011e13;
+}
+.hmm{
+  margin: 0%;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+  font-weight: 500;
+  color: #011e13;
+  text-decoration: underline;
+}
+.hmm1{
+  margin: 2%;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Geneva', 'Verdana', 'sans-serif';
+  font-weight: 400;
+  color: #020736;
+}
+
 .dropbtn {
     background-color: #04AA6D;
-    color: white;
+    color: rgb(180, 14, 14);
     padding: 16px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
     border: none;
+    text-decoration: none;
   }
-  
+  a {
+    text-decoration: none;
+  }
+  /*
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -143,7 +199,7 @@
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
-  
+  */
 /*
 Media query does not required because of self adjustment
 */
