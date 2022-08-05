@@ -156,6 +156,6 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-SITE_ID = 1 #given site in admin page
+SITE_ID = 2 #given site in admin page
 
 LOGIN_REDIRECT_URL = 'home'  #redirected to Main application page after login
