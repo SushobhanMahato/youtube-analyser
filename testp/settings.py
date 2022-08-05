@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure--l&$vidfx2a%s7g7e+jsmbjn3t0a68ga!g+*8zugo%8v^5e6!%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','youtuber-help.herokuapp.com']
 
 
 # Application definition
