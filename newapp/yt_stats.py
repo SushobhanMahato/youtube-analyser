@@ -10,7 +10,7 @@ class YTstats:
         self.channel_id = channel_id
         self.channel_statistics = None
         self.video_data = None
-
+        self.video_ids = []
     def extract_all(self):
         self.get_channel_statistics()
         self.get_channel_video_data()
@@ -42,6 +42,7 @@ class YTstats:
 
         parts=["snippet", "statistics","contentDetails", "topicDetails"]
         for video_id in tqdm(channel_videos):
+            self.video_ids.append(video_id)
             for part in parts:
                 data = self._get_single_video_data(video_id, part)
                 channel_videos[video_id].update(data)

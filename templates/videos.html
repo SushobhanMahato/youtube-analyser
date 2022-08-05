@@ -1,0 +1,67 @@
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+    
+    <!--  <link rel="stylesheet" href="{% static 'styles2.css' %}"> 
+     <script src="{% static 'script2.js' %}" defer></script>-->
+     <style>
+      body {
+        background-color: black;
+      }
+      .login-page1 {
+          width: 600px;
+          padding: 0 0;
+          margin: auto;
+        }
+        .form1{
+         /*
+          position: relative;
+          z-index: 1;
+          */
+          background: white;
+          max-width: 600px;
+          margin: 0 auto 50px;
+         /* border: #04AA6D 2px solid;*/
+          padding: 20px;
+          text-align: center;
+          text-decoration: none;
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+        
+      .chname{
+        margin: 0%;
+        font-size: 20px;
+        text-decoration: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+        font-weight: 400;
+        color: #011e13;
+      }
+      a{
+        text-decoration: none;
+      }
+      a :hover{
+        text-decoration: underline;
+      }
+     </style>
+
+
+      <title>Main Page</title>
+    </head>
+    <body>
+     {% for video in all_videos %}
+     <div class="login-page1">
+          <div class="form1">
+            <img src={{ video.thumbnails }} height="150px" width="225px">
+           <p class="chname"> <a href="{{ video.video_link }}" target="blank"> {{ video.video_title }} </a></p>
+          
+            <p class="chname"> Total Views = {{video.views }} </p>
+            <p class="chname"> Total Comments = {{video.comments }} </p>
+            <p class="chname"> Total Likes = {{video.likes }} </p>
+      </div>
+    </div>
+      {% endfor %}
+    </body>
+</html>
